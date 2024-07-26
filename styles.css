@@ -1,3 +1,5 @@
+/* gap between "awesome" text and img holder */
+
 * {
     outline: red 1px solid;
     margin: 0;
@@ -5,11 +7,11 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', arial;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%
+    min-height: 100vh;
 }
 
 header {
@@ -17,8 +19,12 @@ header {
     color: #F9FAF8;
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0 100;
+    padding: 10 0 0 100;
     text-decoration: none;
+}
+
+.header-logo {
+    font-size: 24px;
 }
 
 a:hover, a:visited, a:link, a:active{
@@ -27,8 +33,10 @@ a:hover, a:visited, a:link, a:active{
 }
 
 ul {
-    list-style-type: none;
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style-type: none;
     padding: 0 100 0 0;
 }
 
@@ -38,10 +46,61 @@ li {
 
 .hero {
     display: flex;
-    padding: 0 100 0 100;
+    align-items: center;
+    justify-content: center;
+    padding: 100 100 100 100;
+    font-size: 18px;
+    gap: 20px;
 }
 
-.hero,.footer {
+.hero-content {
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.awe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.awe button {
+    align-self: flex-start;
+}
+
+.awe p {
+    font-size: 18px;
+    color: #E5E7EB;
+    display: flex;
+}
+
+button {
+    color: #F9FAF8;
+    background-color: #3882F6;
+    padding: 5 20;
+    font-weight: 900;
+    border-radius: 8px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    flex-shrink: 0;
+    width: 50%;
+
+}
+
+.hero,footer {
     background-color: #1F2937;
     color: #F9FAF8;
 }
@@ -50,6 +109,12 @@ li {
     display: flex;
     justify-content: center;
     padding: 0 100 0 100;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937
 }
 
 .quote {
@@ -67,9 +132,11 @@ li {
     color:#F9FAF8
 }
 
-.footer {
+footer {
+    height: 70px;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
-    flex-shrink: 0;
+    align-items: center;
+    position: absolute;
+    right: 0;bottom:0;left:0;
 }
